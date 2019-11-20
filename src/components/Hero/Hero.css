@@ -1,0 +1,10 @@
+.Hero {
+  padding: 20px;
+  /* background-color: darkcyan; 
+   color: white; */
+  border-radius: 0 0 -10px -10px;
+}
+
+.Hero h1 {
+  font-family: 'Bungee Shade', cursive;
+}

@@ -1,22 +1,69 @@
+/* *{
+  box-sizing: border-box;
+  border: 1px gray solid;
+} */
+@font-face {
+  font-family: clipneon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/clip.ttf);
+}
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+@font-face {
+  font-family: moon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/moon.ttf);
+}
+/* font-family: 'Bungee Shade', cursive;
+font-family: 'Bungee Outline', cursive;
+font-family: 'Orbitron', sans-serif; */
+/* font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
 .App {
   text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
 }
 
-.App-logo {
-  height: 40vmin;
+ul{
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.App-link {
-  color: #09d3ac;
+section{
+  margin: 0 10px;
+}
+
+h2{
+  padding: 0px;
+  font-size: 25px;
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: black;
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+  border: 1px black solid;
+  /* text-decoration: underline; */
+  box-shadow: 5px 5px grey;
+}
+
+h3{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+}
+  
+p{
+  font-family: 'Roboto Mono', monospace;
+  margin: 10px 20px;
+}
+
+.dark-mode{
+
 }
