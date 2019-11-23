@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import './About.css'
+import { NavContext } from '../../contexts/NavContext'
 
-export default function About() {
+const About = () => {
+  const { addSection } = useContext(NavContext)
+
+  useEffect(() => {
+    addSection('About')
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
-    <section className="About" id="About">
+    <section className="About">
       <h2>About</h2>
       <p>
         Four score and seven years ago*. Hello, I'm a full stack Javascript web
@@ -20,3 +28,5 @@ export default function About() {
     </section>
   )
 }
+
+export default About

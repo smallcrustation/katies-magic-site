@@ -12,11 +12,11 @@ function App() {
     <div className="App">
       <NavContextProvider>
         <Header />
+        <Hero />
+        <About />
+        <Skills />
+        <ProjectsList />
       </NavContextProvider>
-      <Hero />
-      <About />
-      <Skills />
-      <ProjectsList />
     </div>
   )
 }

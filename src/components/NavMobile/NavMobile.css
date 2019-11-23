@@ -1,13 +1,6 @@
 .NavMobile{
 }
 
-.NavMobile li{
-  border: 1px black solid;
-  height: 100%;
-  padding: 10px;
-  background-color: white;
-}
-
 .NavMobile-ul-hidden {
   /* display: none; */
   height: 0;
@@ -21,19 +14,31 @@
 
   position: static;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: absolute;
   top: 55px;
   right: 0;
-  font-size: 25px;
 
   height: auto;
-  width: 300px;
+  width: 100%;
   transition: width 500ms linear 500ms;
 }
 
-/* .NavMobile-ul-visible li{
-  margin: 10px;
+.NavMobile li{
+  border: 1px black solid;
+  height: 100%;
+  padding: 15px 5px 10px 5px;
+  background-color: white;
+  font-family: neon;
+  font-size: 20px;
+}
+
+/* .NavMobile a{
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: neon;
+  padding: 15px 5px 10px 5px;
 } */
 
 .menu-icon {
@@ -45,9 +50,11 @@
 .menu-icon-top,
 .menu-icon-bottom {
   position: absolute;
-  height: 3px;
+  height: 1px;
   width: 30px;
   background-color: black;
+  border: .5px black solid;
+  border-radius: 20px;
 }
 
 .menu-icon-top {

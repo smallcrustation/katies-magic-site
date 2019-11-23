@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import { NavContext } from '../../contexts/NavContext'
 import Project from '../Project/Project'
 import './ProjectsList.css'
 
 const ProjectsList = () => {
+  const { addSection } = useContext(NavContext)
+
+  useEffect(() => {
+    addSection('ProjectsList')
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
-    <section className="ProjectsList" id="ProjectsList">
+    <section className="ProjectsList">
       <h2>Projects</h2>
       <div>
         <Project
