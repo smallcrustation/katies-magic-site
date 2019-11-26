@@ -12,7 +12,7 @@ const NavContextProvider = props => {
     setExpanded(!expanded)
   }
 
-  const addSection = (navStr) => {
+  const addSection = navStr => {
     setSection(prevState => ({
       ...prevState,
       [navStr]: document.getElementsByClassName(navStr)[0]
@@ -20,7 +20,7 @@ const NavContextProvider = props => {
   }
 
   const scrollTo = className => {
-    sections[className].scrollIntoView({behavior: "smooth"})
+    sections[className].scrollIntoView({ behavior: 'smooth' })
   }
 
   const value = {

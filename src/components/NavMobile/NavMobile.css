@@ -1,27 +1,20 @@
 .NavMobile{
+  overflow: hidden;
 }
 
 .NavMobile-ul-hidden {
-  /* display: none; */
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  /* background: white; */
+  position: absolute;
+  left: 110%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .NavMobile-ul-visible {
-  /* border: 1px black solid; */
-
-  position: static;
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  top: 55px;
-  right: 0;
-
-  height: auto;
+  top: 45px;
+  left: 0;
   width: 100%;
-  transition: width 500ms linear 500ms;
+  transform: translateX(0);
+  transition: all 500ms linear 500ms;
 }
 
 .NavMobile li{

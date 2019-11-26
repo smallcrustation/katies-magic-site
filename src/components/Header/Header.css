@@ -3,6 +3,7 @@
   padding: 5px 10px;
   border-bottom:1px black solid;
   background-color:#DCDCDC;
+  overflow-x:hidden;
 }
 
 .Header header{

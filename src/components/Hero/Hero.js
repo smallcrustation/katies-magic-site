@@ -4,7 +4,7 @@ import './Hero.css'
 export default class Hero extends Component {
   render() {
     return (
-      <div className="Hero">
+      <div className="Hero fadeInDown-2">
         <h1>Hi, I'm Cody the Coder</h1>
       </div>
     )

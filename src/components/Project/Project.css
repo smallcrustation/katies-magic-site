@@ -1,29 +1,35 @@
-.Project{
-  
+.Project {
 }
 
-.Project-images{
+.Project-bg {
+  z-index: -1;
+  transition: all 1s linear;
+}
+
+.Project-imgs {
   position: relative;
 }
 
-.Project img{
-  position: relative;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+/* relative parent absolute child - gives you an element you can position inside parent*/
+.Project img {
+  z-index: 1;
+  margin: 20px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 90%;
   border: rgb(241, 241, 241) 1px solid;
   border-radius: 5px;
   box-shadow: 5px 5px 10px lightgray;
   background-color: white;
 }
 
-.Project img:nth-child(2){
-  position: absolute;
-  width: 25%;  
-  left: 70%;
-  top: 30%;
+.Project img:nth-child(2) {
+  width: 25%;
+  left: 67%;
+  top: 20%;
 }
 
-.Project img:hover{
+.Project img:hover {
   cursor: pointer;
 }

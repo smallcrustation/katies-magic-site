@@ -11,8 +11,8 @@ const About = () => {
   }, [])
 
   return (
-    <section className="About">
-      <h2>About</h2>
+    <section className="About slide-in-from-left">
+      <h2 className="">About</h2>
       <p>
         Four score and seven years ago*. Hello, I'm a full stack Javascript web
         developer using the PERN stack.

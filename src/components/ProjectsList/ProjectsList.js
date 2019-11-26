@@ -6,8 +6,15 @@ import './ProjectsList.css'
 const ProjectsList = () => {
   const { addSection } = useContext(NavContext)
 
+  // const handleScroll = () => {
+  //   // console.log('scroll')
+  //   // console.log(window.pageYOffset)
+
+  // }
+
   useEffect(() => {
     addSection('ProjectsList')
+    // window.addEventListener('scroll', handleScroll)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
