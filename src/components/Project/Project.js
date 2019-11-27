@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Project.css'
 
 const Project = ({
@@ -14,17 +14,33 @@ const Project = ({
 }) => {
   const [scrollPos, setScrollPos] = useState(window.pageYOffset)
 
+  const projectRef = useRef()
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
+    // const options = {
+    //   root: projectRef.current,
+    //   rootMargin: '0px',
+    //   threshold: 1
+    // }
+    // const observer = new IntersectionObserver(handleScroll, options)
+    // console.log('clientHeight:', projectRef.current.clientHeight)
+    // console.log('offsetTop:', projectRef.current.offsetTop)
   }, [])
 
   const handleScroll = () => {
-    // console.log('scroll')
-    // console.log(window.pageYOffset)
-    if (window.pageYOffset % 10 === 0) {
-      setScrollPos(window.pageYOffset)
+    const bottomWindowYOffset = window.pageYOffset + window.innerHeight
+    // if projectRef is in the viewport & top of viewport is not past top of projectRef
+    if (
+      bottomWindowYOffset > projectRef.current.offsetTop &&
+      window.pageYOffset < projectRef.current.offsetTop
+    ) {
+      let pos =
+        projectRef.current.clientHeight +
+        projectRef.current.offsetTop -
+        bottomWindowYOffset
+      setScrollPos(pos / 20)
     }
-    // setScrollPos(window.pageYOffset % 360)
   }
 
   const openSite = url => {
@@ -33,15 +49,21 @@ const Project = ({
 
   return (
     <article className="Project">
-      <div className="Project-imgs fadeInUp" onClick={() => openSite(liveUrl)}>
+      <div
+        className="Project-imgs fadeInUp"
+        onClick={() => openSite(liveUrl)}
+        ref={projectRef}
+      >
         <img
           className="Project-img1"
+          style={{ transform: `translateY(${scrollPos / 2}%)` }}
           src={require(`../../assets/images/${imgOneName}`)}
           alt={title}
         />
         {imgTwoName ? (
           <img
             className="Project-img2"
+            style={{ transform: `translateY(${scrollPos / 3}%)` }}
             src={require(`../../assets/images/${imgTwoName}`)}
             alt={title}
           />
@@ -50,12 +72,15 @@ const Project = ({
         )}
         <div
           className="Project-bg"
-          style={{ transform: `rotate(${scrollPos}deg)` }}
+          style={{
+            // transform: `rotate(${scrollPos}deg) translateY(${scrollPos}%);`
+            transform: `translateY(${scrollPos / 3}%)`
+          }}
         >
           <svg
             viewBox="0 0 1900 1900"
             className=""
-            // style={{ transform: `rotate(${scrollPos}deg)` }}
+            style={{ transform: `rotate(${scrollPos}deg)` }}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -76,9 +101,11 @@ const Project = ({
         ''
       )}
       <p>{tech}</p>
-      <button onClick={() => openSite(liveUrl)}>View Site</button>
-      <button onClick={() => openSite(gitHub)}>Repo</button>
-      {githubApi ? <button>Repo api</button> : ''}
+      <div className="Project-links">
+        <a href={liveUrl} target="_blank" rel="noopener noreferrer">View Site</a>
+        <a href={gitHub} target="_blank" rel="noopener noreferrer">Repo</a>
+        {githubApi ? <a href={githubApi} target="_blank" rel="noopener noreferrer">Api Repo</a> : ''}
+      </div>
     </article>
   )
 }

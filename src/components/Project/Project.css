@@ -1,9 +1,33 @@
 .Project {
 }
 
-.Project-bg {
-  z-index: -1;
-  transition: all 1s linear;
+.Project h3{
+  margin-top: 0px;
+}
+
+.Project p{
+  text-align: left;
+}
+
+.Project section{
+  padding-left: 15%;
+  text-align: left;
+}
+
+.Project-links{
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Project-links a{
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  box-shadow: 3px 4px black;
+  padding: 10px;
+  text-align: center;
 }
 
 .Project-imgs {
@@ -22,6 +46,7 @@
   border-radius: 5px;
   box-shadow: 5px 5px 10px lightgray;
   background-color: white;
+  transition: all .8s 0s cubic-bezier(.1,0,.36,1.7);
 }
 
 .Project img:nth-child(2) {
