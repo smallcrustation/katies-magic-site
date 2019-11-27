@@ -6,6 +6,8 @@ import About from '../About/About'
 import Skills from '../Skills/Skills'
 import ProjectsList from '../ProjectsList/ProjectsList'
 import NavContextProvider from '../../contexts/NavContext'
+import Contact from '../Contact/Contact'
+import Footer from '../Footer/Footer'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <About />
         <Skills />
         <ProjectsList />
+        <Contact />
+        <Footer />
       </NavContextProvider>
     </div>
   )

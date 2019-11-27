@@ -12,7 +12,7 @@ const Project = ({
   githubApi,
   credentials
 }) => {
-  const [scrollPos, setScrollPos] = useState(window.pageYOffset)
+  const [scrollPos, setScrollPos] = useState(window.pageYOffset) 
 
   const projectRef = useRef()
 
@@ -93,18 +93,18 @@ const Project = ({
       <h3>{title}</h3>
       <p>{summary}</p>
       {credentials ? (
-        <section>
+        <div>
           Username: {credentials.username} <br /> Password:{' '}
           {credentials.password}
-        </section>
+        </div>
       ) : (
         ''
       )}
       <p>{tech}</p>
       <div className="Project-links">
-        <a href={liveUrl} target="_blank" rel="noopener noreferrer">View Site</a>
-        <a href={gitHub} target="_blank" rel="noopener noreferrer">Repo</a>
-        {githubApi ? <a href={githubApi} target="_blank" rel="noopener noreferrer">Api Repo</a> : ''}
+        <a className="a-btn" href={liveUrl} target="_blank" rel="noopener noreferrer">View Site</a>
+        <a className="a-btn" href={gitHub} target="_blank" rel="noopener noreferrer">Repo</a>
+        {githubApi ? <a className="a-btn" href={githubApi} target="_blank" rel="noopener noreferrer">Api Repo</a> : ''}
       </div>
     </article>
   )
