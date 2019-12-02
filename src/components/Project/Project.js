@@ -55,24 +55,26 @@ const Project = ({
         // onClick={() => openSite(liveUrl)}
         ref={projectRef}
       >
-        <img
-          onClick={() => openSite(liveUrl)}
-          className="Project-img1"
-          style={{ transform: `translateY(${-scrollPos / 2}%)` }}
-          src={require(`../../assets/images/${imgOneName}`)}
-          alt={title}
-        />
-        {imgTwoName ? (
+        <div>
           <img
             onClick={() => openSite(liveUrl)}
-            className="Project-img2"
-            style={{ transform: `translateY(${-scrollPos / 3}%)` }}
-            src={require(`../../assets/images/${imgTwoName}`)}
+            className="Project-img1"
+            style={{ transform: `translateY(${-scrollPos / 2}%)` }}
+            src={require(`../../assets/images/${imgOneName}`)}
             alt={title}
           />
-        ) : (
-          ''
-        )}
+          {imgTwoName ? (
+            <img
+              onClick={() => openSite(liveUrl)}
+              className="Project-img2"
+              style={{ transform: `translateY(${-scrollPos / 3}%)` }}
+              src={require(`../../assets/images/${imgTwoName}`)}
+              alt={title}
+            />
+          ) : (
+            ''
+          )}
+        </div>
         <div
           className="Project-bg circle"
           style={{
@@ -81,7 +83,7 @@ const Project = ({
             // transform: `translateY(${scrollPos / 3}%)`
           }}
         >
-          <Waves fillColor="black"/>
+          <Waves fillColor="black" />
         </div>
       </div>
       <h3>{title}</h3>
