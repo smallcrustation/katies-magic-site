@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './Project.css'
+import Waves from '../../assets/svgs/waves'
 
 const Project = ({
   imgOneName,
@@ -12,7 +13,7 @@ const Project = ({
   githubApi,
   credentials
 }) => {
-  const [scrollPos, setScrollPos] = useState(window.pageYOffset) 
+  const [scrollPos, setScrollPos] = useState(window.pageYOffset)
 
   const projectRef = useRef()
 
@@ -51,19 +52,21 @@ const Project = ({
     <article className="Project">
       <div
         className="Project-imgs fadeInUp"
-        onClick={() => openSite(liveUrl)}
+        // onClick={() => openSite(liveUrl)}
         ref={projectRef}
       >
         <img
+          onClick={() => openSite(liveUrl)}
           className="Project-img1"
-          style={{ transform: `translateY(${scrollPos / 2}%)` }}
+          style={{ transform: `translateY(${-scrollPos / 2}%)` }}
           src={require(`../../assets/images/${imgOneName}`)}
           alt={title}
         />
         {imgTwoName ? (
           <img
+            onClick={() => openSite(liveUrl)}
             className="Project-img2"
-            style={{ transform: `translateY(${scrollPos / 3}%)` }}
+            style={{ transform: `translateY(${-scrollPos / 3}%)` }}
             src={require(`../../assets/images/${imgTwoName}`)}
             alt={title}
           />
@@ -71,23 +74,14 @@ const Project = ({
           ''
         )}
         <div
-          className="Project-bg"
+          className="Project-bg circle"
           style={{
-            // transform: `rotate(${scrollPos}deg) translateY(${scrollPos}%);`
-            transform: `translateY(${scrollPos / 3}%)`
+            transform: `rotate(${scrollPos / 5}deg) translateY(${scrollPos /
+              5}%)`
+            // transform: `translateY(${scrollPos / 3}%)`
           }}
         >
-          <svg
-            viewBox="0 0 1900 1900"
-            className=""
-            style={{ transform: `rotate(${scrollPos}deg)` }}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="grey"
-              d="M776.64 1769.187c-339.61-4.3-760.32-193.93-752.561-605.062 0-62.815-23.275-139.64-23.235-211.688-8.868-212.772 55.736-445.799 189.453-628.04 16.711-21.534 34.51-45.114 52.477-61.584C512.856-46 1024.907-77.03 1314.034 132.416c284.817 178.416 581.877 496.461 462.072 868.078-6.307 25.42-9.675 52.036-13.46 78.697a1072.405 1072.405 0 01-33.912 155.276c-7.301 23.14-15.595 46.241-25.463 68.962-195.278 318.371-614.23 490.059-986.631 465.758z"
-            />
-          </svg>
+          <Waves fillColor="black"/>
         </div>
       </div>
       <h3>{title}</h3>
@@ -102,9 +96,34 @@ const Project = ({
       )}
       <p>{tech}</p>
       <div className="Project-links">
-        <a className="a-btn" href={liveUrl} target="_blank" rel="noopener noreferrer">View Site</a>
-        <a className="a-btn" href={gitHub} target="_blank" rel="noopener noreferrer">Repo</a>
-        {githubApi ? <a className="a-btn" href={githubApi} target="_blank" rel="noopener noreferrer">Api Repo</a> : ''}
+        <a
+          className="a-btn"
+          href={liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Site
+        </a>
+        <a
+          className="a-btn"
+          href={gitHub}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Repo
+        </a>
+        {githubApi ? (
+          <a
+            className="a-btn"
+            href={githubApi}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Api Repo
+          </a>
+        ) : (
+          ''
+        )}
       </div>
     </article>
   )

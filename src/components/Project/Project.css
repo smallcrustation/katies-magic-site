@@ -21,16 +21,32 @@
   flex-wrap: wrap;
 }
 
+.Project-bg{
+  background-color: lightgrey;
+  overflow: hidden;
+  transition: .5s linear all;
+}
+
+.Project-bg svg{
+  /* 'crop' svg  */
+  margin: -2%; 
+}
+
 .Project-imgs {
-  position: relative;
+  /* position: relative; */
+  /* width: 100%; */
+  margin: 20px 0;
 }
 
 /* relative parent absolute child - gives you an element you can position inside parent*/
 .Project img {
+  /* display: none; */
+
   z-index: 1;
   margin: 20px;
   position: absolute;
-  top: 10px;
+  /* top: 10px; */
+  top: 10%;
   left: 0;
   width: 90%;
   border: rgb(241, 241, 241) 1px solid;
