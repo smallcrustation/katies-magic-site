@@ -8,6 +8,10 @@
   transition: transform .5s linear;
 }
 
+.DayNight:hover{
+  cursor: pointer;
+}
+
 
 .DayNight-moon{
   position: relative;
