@@ -8,18 +8,21 @@ import ProjectsList from '../ProjectsList/ProjectsList'
 import NavContextProvider from '../../contexts/NavContext'
 import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
+import ThemeContextProvider from '../../contexts/ThemeContext'
 
 function App() {
   return (
     <div className="App">
       <NavContextProvider>
-        <Header />
-        <Hero />
-        <About />
-        <Skills />
-        <ProjectsList />
-        <Contact />
-        <Footer />
+        <ThemeContextProvider>
+          <Header />
+          <Hero />
+          <About />
+          <Skills />
+          <ProjectsList />
+          <Contact />
+          <Footer />
+        </ThemeContextProvider>
       </NavContextProvider>
     </div>
   )

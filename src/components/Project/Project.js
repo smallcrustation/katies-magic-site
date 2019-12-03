@@ -76,7 +76,7 @@ const Project = ({
           )}
         </div>
         <div
-          className="Project-bg circle"
+          className="Project-bg circle-ish"
           style={{
             transform: `rotate(${scrollPos / 5}deg) translateY(${scrollPos /
               5}%)`

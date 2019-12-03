@@ -24,10 +24,10 @@ font-family: 'Roboto Mono', monospace; */
   text-align: center;
   margin: 0 auto;
   max-width: 700px;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
-.a-btn{
+.a-btn {
   color: black;
   text-decoration: none;
   border: 1px solid black;
@@ -37,23 +37,27 @@ font-family: 'Roboto Mono', monospace; */
   text-align: center;
 }
 
-ul{
+ul {
   margin: 0;
   padding: 0;
 }
 
-li{
+li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-section{
+section {
   margin: 0 10px;
 }
 
-h2{
-  margin-top:40px;
+h1{
+  font-family: 'Bungee Shade', sans-serif;
+}
+
+h2 {
+  margin-top: 40px;
   margin-bottom: 30px;
   padding: 0px;
   font-size: 25px;
@@ -67,30 +71,34 @@ h2{
   box-shadow: 5px 5px grey;
 }
 
-h3{
+h3 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
 }
-  
-p{
+
+p {
   font-family: 'Roboto Mono', monospace;
   margin: 10px 20px;
   /* animation: fadeIn 1s linear 0s 1 normal both; */
 }
 
-section{
+section {
   animation: fadeIn 1s linear 0s 1 normal both;
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-} 
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-.fadeInUp{
+.fadeInUp {
   opacity: 0;
   animation: fadeInUp 1s linear 0s 1 normal both;
-    /* animation-name: fadeInUp;
+  /* animation-name: fadeInUp;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-delay: 0;
@@ -112,12 +120,13 @@ section{
   }
 }
 
-.fadeInDown-1{
+.fadeInDown-1 {
   opacity: 0;
-  animation: fadeInDown 1s cubic-bezier(.81,.74,0,1.1) 0s 1 normal both running;
+  animation: fadeInDown 1s cubic-bezier(0.81, 0.74, 0, 1.1) 0s 1 normal both
+    running;
 }
 
-.fadeInDown-2{
+.fadeInDown-2 {
   opacity: 0;
   animation: fadeInDown 1s linear 0s 1 normal both running;
 }
@@ -132,19 +141,29 @@ section{
   }
 }
 
-.slide-in-from-left{
-  animation: slideInFromLeft 1s cubic-bezier(.81,.74,0,1.1) 0s 1 normal both running;
+.slide-in-from-left {
+  animation: slideInFromLeft 1s cubic-bezier(0.81, 0.74, 0, 1.1) 0s 1 normal
+    both running;
 }
-@keyframes slideInFromLeft{
-  from{transform: translateX(-100%)}
-  to{transform: translateX(0)}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
-.slide-in-from-right{
-  animation: slideInFromRight 1s cubic-bezier(.81,.74,0,1.1) 0s 1 normal both running;
+.slide-in-from-right {
+  animation: slideInFromRight 1s cubic-bezier(0.81, 0.74, 0, 1.1) 0s 1 normal
+    both running;
 }
-@keyframes slideInFromRight{
-  from{transform: translateX(100%)}
-  to{transform: translateX(0)}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 /* section:nth-of-type(1n){
@@ -154,19 +173,39 @@ section:nth-of-type(2n){
   animation: slideInFromRight 1s cubic-bezier(.81,.74,0,1.1) 0s 1 normal forwards running;
 } */
 
-.circle{
-  /* width: 400px;
-  height: 400px; */
-  /* background-color: black; */
-
-  /* background-image: url('../../assets/images/bg-isobar.png');
-  background-position: top right; */
-
+.circle-ish {
   border-radius: 40%;
-  /* margin: -20px; */
   /* border: 1px grey solid; */
 }
 
-.dark-mode{
-
+.neon-text-off{
+  /* color: rgb(99, 99, 99); */
+  /* text-shadow: 1px 1px 2px slategray; */
 }
+
+.neon-text-b {
+  color: #2bfff8;
+  text-shadow: 0 0 0.4em #00fff7, 0 0 0.3em #00fff7, 0 0 0.3em #00fff7;
+}
+
+.neon-text-r {
+  color: rgb(255, 42, 42);
+  text-shadow: 0 0 10vw #f40a35;
+}
+
+.neon-text-o {
+  color: rgb(255, 167, 36);
+  text-shadow: 0 0 10vw #f40a35;
+}
+
+.neon-div-o {
+  background-color: rgb(255, 167, 36);
+  /* border-color: rgb(255, 167, 36); */
+  /* box-shadow: 0 0 .3em #F40A35, 0 0 .3em #F40A35, 0 0 .3em #F40A35; */
+  box-shadow: 0 0 .4em #f40a35, 0 0 .4em #f40a35, 0 0 .4em #f40a35;
+}
+
+.dark-mode {
+}
+
+

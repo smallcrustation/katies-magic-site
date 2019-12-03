@@ -1,19 +1,25 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import Nav from '../Nav/Nav'
 import './Header.css'
 import { NavContext } from '../../contexts/NavContext'
+import DayNight from '../DayNight/DayNight'
 
 const Header = () => {
   const {expanded} = useContext(NavContext)
+  const [mobile, setMobile] = useState(true) 
+
+  const toggleMobile = (bool) => {
+    setMobile(bool)
+  }
 
   return (
     <div className="Header" >
-      <header className={`fadeInDown-1 ${expanded?"Header-expanded":""}`}>
+      <header className={`fadeInDown-1 ${expanded&mobile?"Header-expanded":""}`}>
         <a className="Logo" href="/">
-          CO
+          <span className="neon-text-off">CO</span>
         </a>
-        {/* <div className="test"></div> */}
-        <Nav />
+        <DayNight mobile={mobile}/>
+        <Nav toggleMobile={toggleMobile}/>
       </header>
     </div>
   )

@@ -1,0 +1,41 @@
+.DayNight{
+  background-color: #f9d71c;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform .5s linear;
+}
+
+
+.DayNight-moon{
+  position: relative;
+  transform: translate(25px, -50px);
+  background-color: #f8f4dd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: transform .5s linear;
+}
+
+.DayNight-moon-active{
+  transform: translate(9px, -18px);
+  background-color: #f8f4dd;
+  transition: transform .5s linear;
+}
+
+@media screen and (min-width: 600px){
+  .DayNight{
+    width: 50px;
+    height: 50px;
+  }
+  .DayNight-moon{
+    width: 50px;
+    height: 50px;
+  }
+  .DayNight-slide{
+    transform: translateX(-10em);
+    transition: transform .5s linear;
+  }
+}

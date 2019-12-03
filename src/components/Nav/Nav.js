@@ -26,19 +26,22 @@ import NavDesktop from '../NavDesktop/NavDesktop'
 //   }
 // }
 
-const Nav = () => {
+const Nav = ({toggleMobile}) => {
   const [mobile, setMobile] = useState(true)
 
   useEffect(() => {
     handleWindowSizeChange()
     window.addEventListener('resize', handleWindowSizeChange.bind())
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleWindowSizeChange = () => {
     if (window.innerWidth < 600) {
       setMobile(true)
+      toggleMobile(true)
     } else {
       setMobile(false)
+      toggleMobile(false)
     }
   }
 

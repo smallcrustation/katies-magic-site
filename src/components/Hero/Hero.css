@@ -6,5 +6,7 @@
 }
 
 .Hero h1 {
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'Bungee Shade', 'Roboto', sans-serif, Helvetica, Arial;
+  font-size: 3em;
+  line-height: 1.4;
 }
