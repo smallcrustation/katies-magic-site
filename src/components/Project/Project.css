@@ -7,11 +7,13 @@
 
 .Project p{
   text-align: left;
+  max-width: 30em;
+  padding-left: 10%;
 }
 
-.Project section{
-  padding-left: 15%;
+.Project-credentials{
   text-align: left;
+  padding-left: 30%;
 }
 
 .Project-links{
@@ -25,6 +27,7 @@
   background-color: lightgrey;
   overflow: hidden;
   transition: .5s linear all;
+  margin: 5em 0;
 }
 
 .Project-bg svg{
@@ -65,3 +68,17 @@
 .Project img:hover {
   cursor: pointer;
 }
+
+@media screen and (min-width: 1000px){
+  .Project{
+    display: flex;
+    align-items: center;
+  }
+  .Project-imgs{
+    width: 50%;
+  }
+  .Project-summary{
+    width: 50%;
+  }
+}
+
