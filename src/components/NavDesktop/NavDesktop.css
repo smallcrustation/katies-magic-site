@@ -1,70 +1,51 @@
 .NavDesktop{
-  /* display: flex; */
-  /* position: absolute; */
-  /* position: relative; */
-  /* transform: translateX(); */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  transition: .5s linear all;
 }
 
-.NavDesktop-slide{
-  transition: all 500ms linear;
-  transform: translateX(-400px);
-  /* transform: translateX(-1600%); */
+
+.NavDesktop-overflow{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 3em;
+  width: 800px;
 }
 
 .verticalBar{
   background-color: black;
-  /* position: absolute; */
-  height: 45px;
+  height: 3.5em;
   width: 2px;
   border: .5px solid black;
   border-radius: 20px;
+}
+
+.NavDesktop-ul{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.NavDesktop li{
+  margin: 10px;
+}
+
+
+@media screen and (min-width: 1200px){
+  .NavDesktop-active{
+    margin-right: 560px;
+    transition: .5s linear all;
+  }
+}
+
+@media screen and (max-width: 1199px){
+  .NavDesktop-active{
+    margin-right: 480px;
+    transition: .5s linear all;
+
+  }
   
-
-  /* left: 150%; */
-  /* transform: translateX(46px); */
 }
-
-.NavDesktop-ul-hidden{
-  top: -8px;
-  width: 60%;
-  position: absolute;
-  left: 110%;
-  display: flex;
-  justify-content: space-around;
-  transition: all 500ms linear;
-  /* overflow-y: hidden; */
-}
-
-.NavDesktop-ul-visible{
-  /* top: -8px; */
-  /* left: 7%; */
-  width: 60%;
-  transform: translateX(-450px);
-  transition: all 500ms linear;
-}
-
-
-/* .NavMobile-ul-hidden {
-  position: absolute;
-  left: 110%;
-  display: flex;
-  justify-content: space-around;
-  overflow-y: hidden;
-}
-
-.NavMobile-ul-visible {
-  top: 45px;
-  left: 0;
-  width: 100%;
-  transform: translateX(0);
-  transition: all 500ms linear 500ms;
-}
-
-.NavMobile li{
-  border: 1px black solid;
-  height: 100%;
-  padding: 15px 5px 10px 5px;
-  background-color: white;
-  font-family: neon;
-  font-size: 20px;
-} */

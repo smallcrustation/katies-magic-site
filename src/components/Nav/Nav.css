@@ -1,12 +1,15 @@
 .Nav{
 }
 
+.Nav-slide{
+  transform: translateX();
+}
+
 .Nav li{
   border: 1px black solid;
-  height: 100%;
-  padding: 15px 5px 10px 5px;
+  padding: .6em .3em .5em .3em;
   background-color: white;
-  font-family: neon;
+  font-family: neon, sans-serif, Arial;
   font-size: 20px;
 }
 
@@ -16,6 +19,7 @@
 
 .Nav ul{
   margin: 5px 0;
+  overflow: visible;
 }
 
 .menu-icon {
@@ -35,7 +39,6 @@
   height: 1px;
   width: 30px;
   background-color: black;
-  /* border: .5px solid rgb(255, 167, 36); */
   border: .5px solid black;
 
   border-radius: 20px;
@@ -65,3 +68,19 @@
   transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1),
     transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
+
+@media screen and (min-width: 600px){
+  .Nav li{
+    font-size: 25px;
+  }
+
+  .Nav{
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .Nav li{
+    font-size: 30px;
+  }
+}
+

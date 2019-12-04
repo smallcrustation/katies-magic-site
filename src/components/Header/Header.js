@@ -13,15 +13,13 @@ const Header = () => {
   }
 
   return (
-    <div className="Header" >
-      <header className={`fadeInDown-1 ${expanded&mobile?"Header-expanded":""}`}>
+      <header className={`Header fadeInDown-1 ${expanded&mobile?"Header-expanded":""}`}>
         <a className="Logo" href="/">
           <span className="neon-text-off">CO</span>
         </a>
         <DayNight mobile={mobile}/>
         <Nav toggleMobile={toggleMobile}/>
       </header>
-    </div>
   )
 }
 

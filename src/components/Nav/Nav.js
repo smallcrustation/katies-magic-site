@@ -1,33 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './Nav.css'
 import NavMobile from '../NavMobile/NavMobile'
 import NavDesktop from '../NavDesktop/NavDesktop'
+import {NavContext} from '../../contexts/NavContext'
 
-// export default class Nav extends Component {
-//   state = { mobile: true }
-
-//   componentDidMount() {
-//     this.handleWindowSizeChange()
-//     window.addEventListener('resize', this.handleWindowSizeChange.bind(this))
-//   }
-
-//   handleWindowSizeChange() {
-//     if (window.innerWidth < 600) {
-//       this.setState({ mobile: true })
-//     } else {
-//       this.setState({ mobile: false })
-//     }
-//   }
-
-//   render() {
-//     console.log(this.props)
-//     const { mobile } = this.state
-//     return <nav className="Nav">{mobile ? <NavMobile /> : <NavDesktop />}</nav>
-//   }
-// }
 
 const Nav = ({toggleMobile}) => {
   const [mobile, setMobile] = useState(true)
+  const { expanded, toggleExpanded } = useContext(NavContext);
 
   useEffect(() => {
     handleWindowSizeChange()
@@ -36,12 +16,18 @@ const Nav = ({toggleMobile}) => {
   }, [])
 
   const handleWindowSizeChange = () => {
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 705) {
       setMobile(true)
       toggleMobile(true)
+      if(expanded){
+        toggleExpanded()
+      }
     } else {
       setMobile(false)
       toggleMobile(false)
+      if(expanded){
+        toggleExpanded()
+      }
     }
   }
 
