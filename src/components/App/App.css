@@ -1,30 +1,15 @@
-/* *{
-  box-sizing: border-box;
-  border: 1px gray solid;
-} */
-/* @font-face {
-  font-family: clipneon;
-  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/clip.ttf);
-} */
+
 @font-face {
   font-family: neon;
   src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
-/* @font-face {
-  font-family: moon;
-  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/moon.ttf);
-} */
-/* font-family: 'Bungee Shade', cursive;
-font-family: 'Bungee Outline', cursive;
-font-family: 'Orbitron', sans-serif; */
-/* font-family: 'IBM Plex Sans', sans-serif;
-font-family: 'Roboto Mono', monospace; */
 
 .App {
   text-align: center;
   margin: 0 auto;
   max-width: 1200px;
   overflow-x: hidden;
+  background-color: white;
 }
 
 .a-btn {
@@ -50,38 +35,51 @@ li {
 
 section {
   margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 }
+
 
 h1{
   font-family: 'Bungee Shade', sans-serif;
 }
 
 h2 {
-  margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 30px;
-  padding: 0px;
+  width: 100%;
+  max-width: 31em;
   font-size: 25px;
   font-family: 'IBM Plex Sans', sans-serif;
   color: black;
-
-  /* background-color: rgb(236, 236, 236); */
-  /* background-color: #16e2ff; */
-
-  border-radius: 5px;
-  border: 1px black solid;
-  /* border: 2px #0093af solid; */
-
-  /* box-shadow: 5px 5px lightgray; */
-  /* box-shadow: 5px 5px #34e1d4; */
-
+  border-bottom: black double;
+  border-bottom: black solid 1.5px;
   max-width: 25em;
 }
 
 @media screen and (min-width: 705px){
+  section{
+    margin-bottom: 30px;
+    align-items: flex-start;
+  }
   h2{
     font-size: 30px;
+    width: 50%;
+    padding:0;
+
   }
+  p{
+    margin: 0 5em;
+    font-size: 1.2em;
+  }
+  section p{
+    width: 50%;
+  }
+  section:nth-of-type(2n){
+
+    align-items: flex-end;
+   }
 }
 
 h3 {
@@ -91,8 +89,8 @@ h3 {
 
 p {
   font-family: 'Roboto Mono', monospace;
-  margin: 10px auto;
-  max-width: 30em;
+  margin: 10px ;
+  max-width: 31em;
 }
 
 section {
@@ -123,11 +121,9 @@ section {
 
 @keyframes fadeInUp {
   from {
-    /* transform: translate3d(0, 100px, 0,); */
     transform: translateY(40px);
   }
   to {
-    /* transform: translate3d(0); */
     transform: translateY(0);
     opacity: 1;
   }
@@ -185,6 +181,7 @@ section {
 section:nth-of-type(2n){
   animation: slideInFromRight 1s cubic-bezier(.81,.74,0,1.1) 0s 1 normal forwards running;
 } */
+
 
 .circle-ish {
   border-radius: 40%;

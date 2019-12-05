@@ -11,7 +11,8 @@ const Project = ({
   liveUrl,
   gitHub,
   githubApi,
-  credentials
+  credentials,
+  rowRev
 }) => {
   const [scrollPos, setScrollPos] = useState(window.pageYOffset);
 
@@ -53,7 +54,7 @@ const Project = ({
   };
 
   return (
-    <article className="Project">
+    <article className="Project" style={rowRev?{flexDirection: 'row-reverse'}:null}>
       <div
         className="Project-imgs fadeInUp"
         // onClick={() => openSite(liveUrl)}

@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import { NavContext } from '../../contexts/NavContext'
+
 import './Contact.css'
 
 const Contact = () => {
+  const { addSection } = useContext(NavContext)
+
+  useEffect(() => {
+    addSection('Contact')
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   return (
     <section className="Contact">
       <h2>Contact</h2>
