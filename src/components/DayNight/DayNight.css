@@ -1,32 +1,39 @@
 .DayNight{
+  position: absolute;
   background-color: #f9d71c;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   overflow: hidden;
   backface-visibility: hidden;
-  transition: transform .5s linear;
+  /* transition: all .5s linear; */
 }
 
 .DayNight:hover{
   cursor: pointer;
 }
 
+.DayNight-night{
+  background-color: #f8f4dd;
+}
 
 .DayNight-moon{
   position: relative;
   transform: translate(25px, -50px);
-  background-color: #f8f4dd;
+  background-color: white;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  transition: transform .5s linear;
+  /* transition: all .5s linear; */
+  transition: transform .5s linear, background-color .5s linear;
+
 }
 
 .DayNight-moon-active{
   transform: translate(9px, -18px);
-  background-color: #f8f4dd;
-  transition: transform .5s linear;
+  /* background-color: #f8f4dd; */
+  background-color: #29263E;
+  transition: transform .5s linear, background-color .5s linear;
 }
 
 @media screen and (min-width: 705px){

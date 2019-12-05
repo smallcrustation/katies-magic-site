@@ -13,7 +13,8 @@
 }
 
 .App-night{
-  background-color: black;
+  /* background-color: black; */
+  background-color: #29263E;
   color: white;
   transition: 1s linear all;
 }
