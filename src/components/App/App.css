@@ -6,10 +6,21 @@
 
 .App {
   text-align: center;
+  /* margin: 0 auto; */
+  /* max-width: 1200px; */
+  overflow-x: hidden;
+  transition: 1s linear all;
+}
+
+.App-night{
+  background-color: black;
+  color: white;
+  transition: 1s linear all;
+}
+
+.container{
   margin: 0 auto;
   max-width: 1200px;
-  overflow-x: hidden;
-  background-color: white;
 }
 
 .a-btn {
@@ -20,6 +31,13 @@
   padding: 10px;
   margin: 10px;
   text-align: center;
+  transition: 1s linear background-color;
+
+}
+
+.a-btn-dark{
+  background-color: white;
+  transition: 1s linear background-color;
 }
 
 ul {
@@ -52,11 +70,17 @@ h2 {
   max-width: 31em;
   font-size: 25px;
   font-family: 'IBM Plex Sans', sans-serif;
-  color: black;
-  border-bottom: black double;
   border-bottom: black solid 1.5px;
   max-width: 25em;
+  transition: .5s linear border-color;
+
 }
+
+.night-h2{
+  border-color: white;
+  transition: .5s linear border-color;
+}
+
 
 @media screen and (min-width: 705px){
   section{

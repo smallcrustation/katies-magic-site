@@ -1,9 +1,12 @@
 import React, { useContext, useEffect } from 'react'
 import './About.css'
 import { NavContext } from '../../contexts/NavContext'
+import { ThemeContext } from '../../contexts/ThemeContext'
+
 
 const About = () => {
   const { addSection } = useContext(NavContext)
+  const {dayNight} = useContext(ThemeContext)
 
   useEffect(() => {
     addSection('About')
@@ -11,8 +14,8 @@ const About = () => {
   }, [])
 
   return (
-    <section className="About">
-      <h2 className="">About</h2>
+    <section className="About container" >
+      <h2 className={dayNight?"":"night-h2"}>About</h2>
       <p>
         Four score and seven years ago*. Hello, I'm a full stack Javascript web
         developer using the PERN stack.

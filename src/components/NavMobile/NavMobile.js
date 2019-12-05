@@ -1,9 +1,13 @@
 import React, { useContext } from 'react'
 import './NavMobile.css'
 import { NavContext } from '../../contexts/NavContext'
+import { ThemeContext } from "../../contexts/ThemeContext";
+
 
 const NavMobile = () => {
   const { expanded, toggleExpanded, scrollTo } = useContext(NavContext)
+  const { dayNight } = useContext(ThemeContext);
+
 
   return (
     <div className="NavMobile">
@@ -11,12 +15,12 @@ const NavMobile = () => {
         <div
           className={`menu-icon-top ${
             expanded ? 'menu-icon-top-expanded' : ''
-          }`}
+          } ${dayNight?"":"menu-icon-night"}`}
         ></div>
         <div
           className={`menu-icon-bottom ${
             expanded ? 'menu-icon-bottom-expanded' : ''
-          }`}
+          } ${dayNight?"":"menu-icon-night"}`}
         ></div>
       </div>
       <ul

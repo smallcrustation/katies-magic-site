@@ -11,6 +11,7 @@
   background-color: white;
   font-family: neon, sans-serif, Arial;
   font-size: 20px;
+  color: black;
 }
 
 .Nav li:hover{
@@ -40,8 +41,12 @@
   width: 30px;
   background-color: black;
   border: .5px solid black;
-
   border-radius: 20px;
+}
+
+.menu-icon-night{
+  background-color: white;
+  border-color: white;
 }
 
 .menu-icon-top {

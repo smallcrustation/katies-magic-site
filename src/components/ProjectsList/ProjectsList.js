@@ -2,25 +2,22 @@ import React, { useContext, useEffect } from "react";
 import { NavContext } from "../../contexts/NavContext";
 import Project from "../Project/Project";
 import "./ProjectsList.css";
+import { ThemeContext } from "../../contexts/ThemeContext";
+
 
 const ProjectsList = () => {
   const { addSection } = useContext(NavContext);
+  const {dayNight} = useContext(ThemeContext)
 
-  // const handleScroll = () => {
-  //   // console.log('scroll')
-  //   // console.log(window.pageYOffset)
-
-  // }
 
   useEffect(() => {
     addSection("ProjectsList");
-    // window.addEventListener('scroll', handleScroll)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <section className="ProjectsList">
-      <h2>Projects</h2>
+    <section className="ProjectsList container">
+      <h2 className={dayNight?"":"night-h2"}>Projects</h2>
       <div>
         <Project
           imgOneName={"projector-desktop.png"} //all images in '../../assets/images/'

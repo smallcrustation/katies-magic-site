@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import "./Project.css";
 import Waves from "../../assets/svgs/waves";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Project = ({
   imgOneName,
@@ -15,6 +16,7 @@ const Project = ({
   rowRev
 }) => {
   const [scrollPos, setScrollPos] = useState(window.pageYOffset);
+  const {dayNight} = useContext(ThemeContext)
 
   const slowBgYTrans = 5;
   const slowBgRotate = 5;
@@ -107,7 +109,7 @@ const Project = ({
         <p>{tech}</p>
         <div className="Project-links">
           <a
-            className="a-btn"
+            className={`a-btn ${dayNight?"":"a-btn-dark"}`}
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -115,7 +117,7 @@ const Project = ({
             View Site
           </a>
           <a
-            className="a-btn"
+            className={`a-btn ${dayNight?"":"a-btn-dark"}`}
             href={gitHub}
             target="_blank"
             rel="noopener noreferrer"
@@ -124,7 +126,7 @@ const Project = ({
           </a>
           {githubApi ? (
             <a
-              className="a-btn"
+              className={`a-btn ${dayNight?"":"a-btn-dark"}`}
               href={githubApi}
               target="_blank"
               rel="noopener noreferrer"

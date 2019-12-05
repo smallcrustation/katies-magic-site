@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './App.css'
 import Header from '../Header/Header'
 import Hero from '../Hero/Hero'
@@ -8,13 +8,14 @@ import ProjectsList from '../ProjectsList/ProjectsList'
 import NavContextProvider from '../../contexts/NavContext'
 import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
-import ThemeContextProvider from '../../contexts/ThemeContext'
+import { ThemeContext } from '../../contexts/ThemeContext'
 
 function App() {
+  const {dayNight} = useContext(ThemeContext)
+  
   return (
-    <div className="App">
+    <div className={`App ${dayNight?'':'App-night'}`}>
       <NavContextProvider>
-        <ThemeContextProvider>
           <Header />
           <Hero />
           <About />
@@ -22,7 +23,6 @@ function App() {
           <ProjectsList />
           <Contact />
           <Footer />
-        </ThemeContextProvider>
       </NavContextProvider>
     </div>
   )

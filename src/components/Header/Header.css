@@ -1,11 +1,12 @@
 .Header {
   padding: 5px 10px;
   border-bottom:1px black solid;
-  margin: 5px;
+  /* margin: 5px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   transition: all 150ms linear;
+  overflow: hidden;
 }
 
 .Header-expanded{
