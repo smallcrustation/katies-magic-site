@@ -1,4 +1,5 @@
 .Project {
+  /* max-width: 800px; */
 }
 
 .Project h3 {
@@ -36,19 +37,17 @@
 }
 
 .Project-imgs {
-
   margin: 20px 0;
 }
 
 /* relative parent absolute child - gives you an element you can position inside parent*/
 .Project img {
   /* display: none; */
-
   z-index: 1;
   margin: 20px;
   position: absolute;
   /* top: 10px; */
-  top: 10%;
+  /* top: 10%; */
   left: 0;
   width: 90%;
   border: rgb(241, 241, 241) 1px solid;
@@ -68,10 +67,27 @@
   cursor: pointer;
 }
 
+@media screen and (min-width: 705px){
+  .Project{
+    max-width: 800px;
+    align-items: center;
+  }
+  .Project-imgs {
+    margin: 0 10%;
+  }
+  .Project img {
+    top: 10%;
+  }
+  .Project p{
+    margin: 1em auto;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .Project {
     display: flex;
     align-items: center;
+    max-width: 100%;
     /* flex-direction: row-reverse; */
   }
   .Project p{
@@ -79,8 +95,12 @@
   }
   .Project-imgs {
     width: 50%;
+    margin: 0;
   }
   .Project-summary {
     width: 50%;
+  }
+  .Project img {
+    top: 20%;
   }
 }
