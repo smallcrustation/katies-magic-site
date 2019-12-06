@@ -9,14 +9,15 @@
   /* margin: 0 auto; */
   /* max-width: 1200px; */
   overflow-x: hidden;
-  transition: 1s linear all;
+  transition: 1s linear background-color;
+  color: green;
 }
 
 .App-night{
   /* background-color: black; */
   background-color: #29263E;
   color: white;
-  transition: 1s linear all;
+  transition: 1s linear color,1s linear background-color;
 }
 
 .container{
@@ -62,9 +63,11 @@ section {
 
 h1{
   font-family: 'Bungee Shade', sans-serif;
+  color: black;
 }
 
 h2 {
+  color: black;
   margin-top: 40px;
   margin-bottom: 30px;
   width: 100%;
@@ -73,13 +76,14 @@ h2 {
   font-family: 'IBM Plex Sans', sans-serif;
   border-bottom: black solid 1.5px;
   max-width: 25em;
-  transition: .5s linear border-color;
+  transition: .5s linear border-color, 1s linear color;
 
 }
 
 .night-h2{
-  border-color: white;
-  transition: .5s linear border-color;
+  /* border-color: white; */
+  color: white;
+  transition: 1s linear border-color, 1s linear color;
 }
 
 
@@ -154,11 +158,11 @@ section {
   }
 }
 
-/* .fadeInDown-1 {
+.fadeInDown-1 {
   opacity: 0;
   animation: fadeInDown 1s cubic-bezier(0.81, 0.74, 0, 1.1) 0s 1 normal both
     running;
-} */
+}
 
 .fadeInDown-2 {
   opacity: 0;
