@@ -11,7 +11,7 @@ const DayNight = () => {
 
   return (
     <div className="DayNight" onClick={handleDayNightClick}>
-      <div className={`DayNight ${dayNight ? '' : 'DayNight-night'}`}></div>
+      <div className={`DayNight-day ${dayNight ? '' : 'DayNight-night'}`}></div>
       <div
         className={`DayNight-moon ${dayNight ? '' : 'DayNight-moon-active'}`}
       ></div>

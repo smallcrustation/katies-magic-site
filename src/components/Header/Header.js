@@ -18,8 +18,8 @@ const Header = () => {
     <header
     style={dayNight ?null:{borderBottomColor: "white"}}
       className={`Header fadeInDown-1 container ${expanded & mobile ? "Header-expanded" : ""}`} >
-      <a className="Logo" href="/">
-        <span style={dayNight ? null : { color: "white" }}>CO</span>
+      <a className={`Logo ${dayNight?'':'Logo-night'}`} href="/">
+        <span>CO</span>
       </a>
       <DayNight mobile={mobile} />
       <Nav toggleMobile={toggleMobile} />

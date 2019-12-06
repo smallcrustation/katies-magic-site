@@ -42,11 +42,13 @@
   background-color: black;
   border: .5px solid black;
   border-radius: 20px;
+  transition: 1s linear background-color, 1s linear border-color;
 }
 
 .menu-icon-night{
   background-color: white;
   border-color: white;
+  transition: 1s linear background-color, 1s linear border-color;
 }
 
 .menu-icon-top {
