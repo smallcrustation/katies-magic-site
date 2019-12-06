@@ -1,6 +1,7 @@
 .DayNight{
   border-radius: 50%;
   /* overflow: hidden; */
+  position: relative;
 }
 
 .DayNight-day{
@@ -38,14 +39,30 @@
   transition: transform 1s linear, background-color 1s linear;
 }
 
+.cactus-svg{
+  width: 1em;
+  bottom: -.4em;
+  right: -1em;
+  position: absolute;
+}
+
+.cactus-svg *{
+  transition: fill 1s linear;
+}
+
 @media screen and (min-width: 705px){
   .DayNight-day{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
   .DayNight-moon{
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
+  }
+  .cactus-svg{
+    width: 1.9em;
+    bottom: -.9em;
+    right: -2em;
   }
 
 }

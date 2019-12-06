@@ -67,7 +67,7 @@ const ProjectsList = () => {
         <Project
           imgOneName={"whatdo-desktop.png"} //all images in '../../assets/images/'
           imgTwoName={"whatdo-mobile.png"}
-          title={""}
+          title={"WHAT DO"}
           summary={
             "Find event's near you with weather using zip, current location & save events you're interested in"
           }

@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header
-    style={dayNight ?null:{borderBottomColor: "white"}}
+    style={dayNight ?null:{borderBottomColor: "black"}}
       className={`Header fadeInDown-1 container ${expanded & mobile ? "Header-expanded" : ""}`} >
       <a className={`Logo ${dayNight?'':'Logo-night'}`} href="/">
         <span>CO</span>

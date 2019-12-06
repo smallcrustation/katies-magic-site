@@ -25,7 +25,7 @@
 }
 
 .Project-bg {
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   overflow: hidden;
   transition: 0.5s linear all;
   margin: 5em 0;

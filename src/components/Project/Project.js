@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import "./Project.css";
-import Waves from "../../assets/svgs/waves";
+// import WavesSvg from "../../assets/svgs/WavesSvg";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import WavesSvg from "../../assets/svgs/WavesSvg";
 
 const Project = ({
   imgOneName,
@@ -92,7 +93,10 @@ const Project = ({
             // transform: `translateY(${scrollPos / 3}%)`
           }}
         >
-          <Waves fillColor="black" />
+            {/* red ef0519 */}
+            {/* green 75ba2c */}
+            {/* yellow f9d71c */}
+          <WavesSvg fillColor="white" bgColor="black"/>
         </div>
       </div>
       <div className="Project-summary">
