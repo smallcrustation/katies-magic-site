@@ -96,7 +96,7 @@ const Project = ({
             {/* red ef0519 */}
             {/* green 75ba2c */}
             {/* yellow f9d71c */}
-          <WavesSvg fillColor="white" bgColor="black"/>
+          <WavesSvg fillColor="black" bgColor={dayNight?"white":"steelblue"}/>
         </div>
       </div>
       <div className="Project-summary">

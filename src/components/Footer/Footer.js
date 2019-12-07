@@ -1,13 +1,33 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import './Footer.css'
 import { ThemeContext } from '../../contexts/ThemeContext'
 
 const Footer = () => {
-  const {dayNight} = useContext(ThemeContext)
+  const { dayNight } = useContext(ThemeContext)
 
   return (
-    <footer style={dayNight?null:{borderTopColor: "white"}} className="Footer container">
-      <span>2019 Hello</span>
+    <footer
+      style={dayNight ? null : { borderTopColor: 'white' }}
+      className="Footer container"
+    >
+      <div>
+        Built with{' '}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="-11.5 -10.23174 23 20.46348"
+            height="24"
+          >
+            <title>React Logo</title>
+            <circle cx="0" cy="0" r="2.05" fill="#61dafb" />
+            <g stroke="#61dafb" strokeWidth="1" fill="none">
+              <ellipse rx="11" ry="4.2" />
+              <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+              <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+            </g>
+          </svg>
+          {' '}
+        in Fort Lauderdale 2019
+      </div>
     </footer>
   )
 }

@@ -227,7 +227,7 @@ section:nth-of-type(2n){
 
 .circle-ish {
   border-radius: 40%;
-  /* border: 1px grey solid; */
+  border: 2px black solid;
 }
 
 .neon-text-off{
