@@ -58,7 +58,7 @@ const ProjectsList = () => {
           }
           credentials={{ username: "user", password: "Password1!" }}
           tech={"Responsive app made using React.js, Express.js and PostgreSQL"}
-          liveUrl={"https://spaced-repetition.krill.now.sh/register"}
+          liveUrl={"https://spaced-repetition.krill.now.sh/"}
           gitHub={"https://github.com/Hmvalles75/spaced-repetition"}
           githubApi={
             "https://github.com/thinkful-ei-firefly/spaced-repetition-api-hector-cody"
