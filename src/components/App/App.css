@@ -171,6 +171,24 @@ section {
   }
 }
 
+.fadeInUp-disappear{
+  opacity: 0;
+  animation: fadeInUp-disappear 4s cubic-bezier(0.81, 0.74, 0, 1.1) 0s 1 normal forwards;
+}
+
+@keyframes fadeInUp-disappear{
+  0%{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  40%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  65%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
 .fadeInDown-1 {
   opacity: 0;
   animation: fadeInDown 1s cubic-bezier(0.81, 0.74, 0, 1.1) 0s 1 normal both
@@ -190,6 +208,24 @@ section {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.fadeInDown-disappear{
+  opacity: 0;
+  animation: fadeInDown-disappear 4s cubic-bezier(0.81, 0.74, 0, 1.1) 0s 1 normal forwards;
+}
+
+@keyframes fadeInDown-disappear {
+  0%{
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  40%{
+    transform: translate(0);
+    opacity: 1;
+  }
+  65%{opacity: 1;}
+  100%{opacity: 0;}
 }
 
 .slide-in-from-left {

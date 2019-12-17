@@ -1,8 +1,23 @@
 .DayNight{
   border-radius: 50%;
-  /* overflow: hidden; */
   position: relative;
 }
+
+.Daynight-text{
+  z-index: 2;
+  position: absolute;
+  font-size: .8em;
+  transition: 1s all linear;
+  left: 13%;
+  top: 10%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.DayNight-night-text{
+  left: 15px;
+  top: auto;
+}
+
 
 .DayNight-day{
   position: absolute;
@@ -10,7 +25,6 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  /* overflow: hidden; */
 }
 
 .DayNight:hover{
@@ -18,7 +32,6 @@
 }
 
 .DayNight-night{
-  /* background-color: #f8f4dd; */
   background-color: #FACC55;
 }
 
@@ -34,7 +47,6 @@
 
 .DayNight-moon-active{
   transform: translate(9px, -18px);
-  /* background-color: #f8f4dd; */
   background-color: #29263E;
   transition: transform 1s linear, background-color 1s linear;
 }

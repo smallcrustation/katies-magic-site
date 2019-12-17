@@ -12,11 +12,21 @@ const DayNight = () => {
 
   return (
     <div className="DayNight" onClick={handleDayNightClick}>
+      <div
+        className={`Daynight-text ${
+          dayNight ? 'fadeInUp-disappear' : 'fadeInDown-disappear DayNight-night-text'
+        }`}
+      >
+        {dayNight ? 'Day' : 'Night'} Mode
+      </div>
       <div className={`DayNight-day ${dayNight ? '' : 'DayNight-night'}`}></div>
       <div
         className={`DayNight-moon ${dayNight ? '' : 'DayNight-moon-active'}`}
       ></div>
-      <CactSvg flowerColor={dayNight?"#ef0519":"#70040d"} cactusColor={dayNight?"#75ba2c":'#446d19'}/>
+      <CactSvg
+        flowerColor={dayNight ? '#ef0519' : '#70040d'}
+        cactusColor={dayNight ? '#75ba2c' : '#446d19'}
+      />
     </div>
   )
 }
