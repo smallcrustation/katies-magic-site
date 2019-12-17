@@ -33,11 +33,11 @@ const About = () => {
 
       <p>
         Before diving into web dev with JS, I took a few computer science
-        classes in college that piqued my interest further into coding{' '}
+        classes in college then dabbled more with coding;{' '}
       </p>
       <p>
-        First with a small side scroller then web development with python/django
-        and java/spring/springboot.
+        First with a small side scroller then web development with
+        python/django, java/spring and then onto Javascript.
       </p>
     </section>
   )

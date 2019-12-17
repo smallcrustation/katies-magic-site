@@ -27,12 +27,13 @@
 .Project-bg {
   /* background-color: lightgrey; */
   overflow: hidden;
-  transition: 0.5s linear all;
+  transition: .5s linear all;
   margin: 5em 0;
 }
 
 .Project-bg svg {
   /* 'crop' svg  */
+  transition: 2s linear background-color;
   margin: -2%;
 }
 
@@ -54,7 +55,7 @@
   border-radius: 5px;
   box-shadow: 5px 5px 10px lightgray;
   background-color: white;
-  transition: all 0.8s 0s cubic-bezier(0.1, 0, 0.36, 1.7);
+  transition: all .8s 0s cubic-bezier(0.1, 0, 0.36, 1.7);
 }
 
 .Project img:nth-child(2) {

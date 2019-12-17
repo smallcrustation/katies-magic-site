@@ -1,25 +1,20 @@
-.DayNight{
+.DayNight {
   border-radius: 50%;
   position: relative;
 }
 
-.Daynight-text{
+.Daynight-text {
   z-index: 2;
   position: absolute;
-  font-size: .8em;
+  font-size: 0.8em;
   transition: 1s all linear;
-  left: 13%;
+  left: 5%;
   top: 10%;
   font-family: 'Roboto Mono', monospace;
 }
 
-.DayNight-night-text{
-  left: 15px;
-  top: auto;
-}
 
-
-.DayNight-day{
+.DayNight-day {
   position: absolute;
   background-color: #f9d71c;
   border-radius: 50%;
@@ -27,15 +22,15 @@
   height: 40px;
 }
 
-.DayNight:hover{
+.DayNight:hover {
   cursor: pointer;
 }
 
-.DayNight-night{
-  background-color: #FACC55;
+.DayNight-night {
+  background-color: #facc55;
 }
 
-.DayNight-moon{
+.DayNight-moon {
   position: relative;
   transform: translate(25px, -50px);
   background-color: white;
@@ -45,36 +40,42 @@
   transition: transform 1s linear, background-color 1s linear;
 }
 
-.DayNight-moon-active{
+.DayNight-moon-active {
   transform: translate(9px, -18px);
-  background-color: #29263E;
+  background-color: #29263e;
   transition: transform 1s linear, background-color 1s linear;
 }
 
-.cactus-svg{
+.cactus-svg {
   width: 1em;
-  bottom: -.4em;
+  bottom: -0.4em;
   right: -1em;
   position: absolute;
 }
 
-.cactus-svg *{
+.cactus-svg * {
   transition: fill 1s linear;
 }
 
-@media screen and (min-width: 705px){
-  .DayNight-day{
+@media screen and (min-width: 705px) {
+  .DayNight-day {
     width: 60px;
     height: 60px;
   }
-  .DayNight-moon{
+  .DayNight-moon {
     width: 55px;
     height: 55px;
   }
-  .cactus-svg{
+  .cactus-svg {
     width: 1.9em;
-    bottom: -.9em;
+    bottom: -0.9em;
     right: -2em;
   }
-
+  .Daynight-text {
+    left: 13%;
+  }
+  .DayNight-night-text {
+    left: 15px;
+    top: auto;
+  }
 }

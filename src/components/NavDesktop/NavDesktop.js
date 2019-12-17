@@ -27,7 +27,7 @@ const NavDesktop = () => {
       </div>
 
       <div className="NavDesktop-overflow">
-        <div className={`verticalBar ${dayNight?"":"verticalBar-night"}`}></div>
+        <div className="verticalBar"></div>
         <ul
           className="NavDesktop-ul"
         >
