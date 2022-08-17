@@ -16,8 +16,7 @@ const About = () => {
     <section className="About container">
       <h2 className={dayNight ? '' : 'night-h2'}>About</h2>
       <p>
-        Four score and seven years ago*. Hello, I'm a full stack Javascript web
-        developer using the PERN stack.
+        Katie go swooosh splash. We make fun party yay.
       </p>
       {/* <p>
         Growing up I had an affinity for computers that was sparked with video
@@ -30,14 +29,16 @@ const About = () => {
         ethernet cable through my window up to the roof where I was working on
         solving my 'Network Issues'.
       </p> */}
-
       <p>
-        Before diving into web dev with JS, I took a few computer science
-        classes in college then dabbled more with coding;{' '}
+      <ul>
+        <li>-Paint</li>
+        <li>-Mermaid</li>
+        <li>-MAGIC RABBIT</li>
+        <li>-Very Cute</li>
+      </ul>
       </p>
       <p>
-        First with a small side scroller then web development with
-        python/django, java/spring and then onto Javascript.
+        It's going to be RAD!
       </p>
     </section>
   )
